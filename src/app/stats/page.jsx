@@ -2,7 +2,9 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import timeline from "@/data/timeline.json";
+
+import { useContext } from "react";
+import { TimelineContext } from "@/context/TimelineContext";
 
 import {
   PieChart,
@@ -14,23 +16,17 @@ import {
 
 const Stats = () => {
 
-const call = timeline.filter(
-  item => item.type === "call"
-).length;
+  const { timeline = [] } = useContext(TimelineContext);
 
-const text = timeline.filter(
-  item => item.type === "text"
-).length;
+  const call = timeline.filter(item => item.type === "call").length;
+  const text = timeline.filter(item => item.type === "text").length;
+  const video = timeline.filter(item => item.type === "video").length;
 
-const video = timeline.filter(
-  item => item.type === "video"
-).length;
-
-const data = [
-  { name: "Call", value: call },
-  { name: "Text", value: text },
-  { name: "Video", value: video }
-];
+  const data = [
+    { name: "Call", value: call },
+    { name: "Text", value: text },
+    { name: "Video", value: video }
+  ];
 
   return (
     <div>
