@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="border-b bg-white">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
         <h1 className="text-xl font-bold">KeenKeeper</h1>
 
