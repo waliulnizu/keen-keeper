@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import timeline from "@/data/timeline.json";
+import { TimelineContext } from "@/context/TimelineContext";
 
 import { FaPhone, FaVideo } from "react-icons/fa";
 import { IoChatbubbleEllipses } from "react-icons/io5";
 
 const Timeline = () => {
+
+  const { timeline } = useContext(TimelineContext);
 
   const [filter, setFilter] = useState("all");
 
@@ -74,17 +76,11 @@ const Timeline = () => {
 
                 <span className="text-xl">
 
-                  {
-                    item.type === "call" && <FaPhone />
-                  }
+                  {item.type === "call" && <FaPhone />}
 
-                  {
-                    item.type === "text" && <IoChatbubbleEllipses />
-                  }
+                  {item.type === "text" && <IoChatbubbleEllipses />}
 
-                  {
-                    item.type === "video" && <FaVideo />
-                  }
+                  {item.type === "video" && <FaVideo />}
 
                 </span>
 
