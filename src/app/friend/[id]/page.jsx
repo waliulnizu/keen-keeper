@@ -73,6 +73,21 @@ const FriendDetails = async ({ params }) => {
               <p>Next Due</p>
             </div>
           </div>
+          <div className="shadow p-4 rounded mt-4">
+
+<h2 className="font-bold">
+Relationship Goal
+</h2>
+
+<p className="mt-2">
+Connect every {friend.goal} days
+</p>
+
+<button className="mt-2 bg-gray-200 px-3 py-1 rounded">
+Edit
+</button>
+
+</div>
         </div>
       </div>
 
