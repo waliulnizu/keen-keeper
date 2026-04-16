@@ -1,15 +1,18 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import friends from "@/data/friends.json";
 import Image from "next/image";
+import { use } from "react";
 import { FaPhone, FaVideo } from "react-icons/fa";
 import { IoChatbubbleEllipses } from "react-icons/io5";
+import toast from "react-hot-toast";
 
-const FriendDetails = async ({ params }) => {
-  const { id } = await params;
+const FriendDetails = ({ params }) => {
+  const { id } = use(params);
 
   const friend = friends.find((f) => f.id === parseInt(id));
-
   if (!friend) {
     return (
       <div>
@@ -21,6 +24,10 @@ const FriendDetails = async ({ params }) => {
       </div>
     );
   }
+
+  const handleAction = (type) => {
+    toast.success(`${type} added to timeline`);
+  };
 
   return (
     <div>
@@ -87,17 +94,17 @@ const FriendDetails = async ({ params }) => {
             <h2 className="font-bold">Quick Check-In</h2>
 
             <div className="flex gap-4 mt-4">
-              <button className="shadow px-4 py-2 rounded flex items-center gap-2">
+              <button onClick={() => handleAction("Call")} className="shadow px-4 py-2 rounded flex items-center gap-2">
                 <FaPhone />
                 Call
               </button>
 
-              <button className="shadow px-4 py-2 rounded flex items-center gap-2">
+              <button onClick={() => handleAction("Text")} className="shadow px-4 py-2 rounded flex items-center gap-2">
                 <IoChatbubbleEllipses />
                 Text
               </button>
 
-              <button className="shadow px-4 py-2 rounded flex items-center gap-2">
+              <button onClick={() => handleAction("Video")} className="shadow px-4 py-2 rounded flex items-center gap-2">
                 <FaVideo />
                 Video
               </button>
