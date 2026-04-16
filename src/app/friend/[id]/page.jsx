@@ -5,9 +5,10 @@ import Image from "next/image";
 
 const FriendDetails = async ({ params }) => {
 
-    const { id } = await params;
-    const friend = friends.find(
-    f => f.id === parseInt(id)
+  const { id } = await params;
+
+  const friend = friends.find(
+    (f) => f.id === parseInt(id)
   );
 
   if (!friend) {
@@ -26,27 +27,60 @@ const FriendDetails = async ({ params }) => {
     <div>
       <Navbar />
 
-      <div className="max-w-6xl mx-auto py-10">
+      <div className="max-w-6xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <h1 className="text-2xl font-bold">
-          {friend.name}
-        </h1>
+        {/* Left Side */}
+        <div className="shadow p-6 rounded">
 
-        <Image 
-        src={friend.picture}
-        alt={friend.name}
-        height={64}
-        width={64}
-        className="w-24 h-24 rounded-full mt-4"
-        />
+          <Image
+            src={friend.picture}
+            alt={friend.name}
+            width={96}
+            height={96}
+            className="w-24 h-24 rounded-full"
+          />
 
-        <p className="mt-4">
-          {friend.bio}
-        </p>
+          <h2 className="text-xl font-bold mt-4">
+            {friend.name}
+          </h2>
 
-        <p className="mt-2">
-          {friend.email}
-        </p>
+          <p className="text-red-500 mt-2">
+            {friend.status}
+          </p>
+
+          <div className="flex gap-2 mt-3 flex-wrap">
+            {
+              friend.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="bg-gray-200 px-2 py-1 rounded text-sm"
+                >
+                  {tag}
+                </span>
+              ))
+            }
+          </div>
+
+          <p className="mt-4">
+            {friend.bio}
+          </p>
+
+          <p className="mt-2 text-gray-500">
+            {friend.email}
+          </p>
+
+        </div>
+
+        {/* Right Side */}
+        <div className="shadow p-6 rounded">
+          <h3 className="text-lg font-semibold mb-4">
+            Right Side Content
+          </h3>
+
+          <p className="text-gray-600">
+             extra info, analytics, charts, related friends 
+          </p>
+        </div>
 
       </div>
 
