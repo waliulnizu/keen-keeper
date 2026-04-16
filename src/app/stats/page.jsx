@@ -1,19 +1,24 @@
-import Footer from "@/components/Footer";
+"use client";
+
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Stats = () => {
   return (
     <div>
+
       <Navbar />
 
-      <div className="max-w-5xl mx-auto py-10 w ">
+      <div className="max-w-6xl mx-auto py-10">
 
         <h1 className="text-2xl font-bold mb-6">
           Friendship Analytics
         </h1>
 
-        <div className="p-6 shadow rounded">
-          Pie Chart Coming Soon
+        <div className="shadow p-6 rounded">
+
+          Pie Chart Here
+
         </div>
 
       </div>
