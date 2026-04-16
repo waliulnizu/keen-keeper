@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import timeline from "@/data/timeline.json";
@@ -6,6 +9,13 @@ import { FaPhone, FaVideo } from "react-icons/fa";
 import { IoChatbubbleEllipses } from "react-icons/io5";
 
 const Timeline = () => {
+
+  const [filter, setFilter] = useState("all");
+
+  const filteredTimeline = timeline.filter(item => {
+    if (filter === "all") return true;
+    return item.type === filter;
+  });
 
   return (
     <div>
@@ -18,10 +28,44 @@ const Timeline = () => {
           Timeline
         </h1>
 
+        {/* Filter Buttons */}
+        <div className="flex gap-4 mb-6">
+
+          <button
+            onClick={() => setFilter("all")}
+            className="px-3 py-1 shadow rounded"
+          >
+            All
+          </button>
+
+          <button
+            onClick={() => setFilter("call")}
+            className="px-3 py-1 shadow rounded"
+          >
+            Call
+          </button>
+
+          <button
+            onClick={() => setFilter("text")}
+            className="px-3 py-1 shadow rounded"
+          >
+            Text
+          </button>
+
+          <button
+            onClick={() => setFilter("video")}
+            className="px-3 py-1 shadow rounded"
+          >
+            Video
+          </button>
+
+        </div>
+
+        {/* Timeline List */}
         <div className="space-y-4">
 
           {
-            timeline.map(item => (
+            filteredTimeline.map(item => (
 
               <div
                 key={item.id}
