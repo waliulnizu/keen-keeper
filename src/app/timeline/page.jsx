@@ -1,9 +1,15 @@
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import timeline from "@/data/timeline.json";
+
+import { FaPhone, FaVideo } from "react-icons/fa";
+import { IoChatbubbleEllipses } from "react-icons/io5";
 
 const Timeline = () => {
+
   return (
     <div>
+
       <Navbar />
 
       <div className="max-w-5xl mx-auto py-10">
@@ -14,21 +20,46 @@ const Timeline = () => {
 
         <div className="space-y-4">
 
-          <div className="p-4 shadow rounded">
-             Meetup with Tom Baker
-          </div>
+          {
+            timeline.map(item => (
 
-          <div className="p-4 shadow rounded">
-             Text with Sarah Chen
-          </div>
+              <div
+                key={item.id}
+                className="p-4 shadow rounded flex gap-4 items-center"
+              >
 
-          <div className="p-4 shadow rounded">
-             Video with Aisha Patel
-          </div>
+                <span className="text-xl">
 
-          <div className="p-4 shadow rounded">
-             Call with Marcus Johnson
-          </div>
+                  {
+                    item.type === "call" && <FaPhone />
+                  }
+
+                  {
+                    item.type === "text" && <IoChatbubbleEllipses />
+                  }
+
+                  {
+                    item.type === "video" && <FaVideo />
+                  }
+
+                </span>
+
+                <div>
+
+                  <h3 className="font-semibold">
+                    {item.type} with {item.name}
+                  </h3>
+
+                  <p className="text-gray-500">
+                    {item.date}
+                  </p>
+
+                </div>
+
+              </div>
+
+            ))
+          }
 
         </div>
 
