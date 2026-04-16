@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import friends from "@/data/friends.json";
 import Image from "next/image";
+import { FaPhone, FaVideo } from "react-icons/fa";
+import { IoChatbubbleEllipses } from "react-icons/io5";
 
 const FriendDetails = async ({ params }) => {
   const { id } = await params;
@@ -74,20 +76,33 @@ const FriendDetails = async ({ params }) => {
             </div>
           </div>
           <div className="shadow p-4 rounded mt-4">
+            <h2 className="font-bold">Relationship Goal</h2>
 
-<h2 className="font-bold">
-Relationship Goal
-</h2>
+            <p className="mt-2">Connect every {friend.goal} days</p>
 
-<p className="mt-2">
-Connect every {friend.goal} days
-</p>
+            <button className="mt-2 bg-gray-200 px-3 py-1 rounded">Edit</button>
+          </div>
 
-<button className="mt-2 bg-gray-200 px-3 py-1 rounded">
-Edit
-</button>
+          <div className="shadow p-4 rounded mt-4">
+            <h2 className="font-bold">Quick Check-In</h2>
 
-</div>
+            <div className="flex gap-4 mt-4">
+              <button className="shadow px-4 py-2 rounded flex items-center gap-2">
+                <FaPhone />
+                Call
+              </button>
+
+              <button className="shadow px-4 py-2 rounded flex items-center gap-2">
+                <IoChatbubbleEllipses />
+                Text
+              </button>
+
+              <button className="shadow px-4 py-2 rounded flex items-center gap-2">
+                <FaVideo />
+                Video
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
