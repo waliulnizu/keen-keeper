@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const Timeline = () => {
@@ -32,6 +33,8 @@ const Timeline = () => {
         </div>
 
       </div>
+
+      <Footer />
 
     </div>
   );

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const Stats = () => {
@@ -5,7 +6,7 @@ const Stats = () => {
     <div>
       <Navbar />
 
-      <div className="max-w-5xl mx-auto py-10">
+      <div className="max-w-5xl mx-auto py-10 w ">
 
         <h1 className="text-2xl font-bold mb-6">
           Friendship Analytics
@@ -16,6 +17,8 @@ const Stats = () => {
         </div>
 
       </div>
+
+      <Footer />
 
     </div>
   );
