@@ -1,17 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const FriendCard = ({ friend }) => {
-  const { name, picture, days_since_contact, status, tags } = friend;
+  const { id, name, picture, days_since_contact, status, tags } = friend;
 
   return (
-    <div className="shadow p-4 rounded text-center">
-      <Image
-        src={picture}
-        width={64}
-        height={64}
-        alt={name}
-        className="w-16 h-16 rounded-full mx-auto"
-      />
+    <Link href={`/friend/${id}`}>
+      <div className="shadow p-4 rounded text-center">
+        <Image
+          src={picture}
+          width={64}
+          height={64}
+          alt={name}
+          className="w-16 h-16 rounded-full mx-auto"
+        />
 
       <h2 className="font-bold mt-2">{name}</h2>
 
@@ -29,6 +31,7 @@ const FriendCard = ({ friend }) => {
         {status}
       </span>
     </div>
+    </Link>
   );
 };
 
