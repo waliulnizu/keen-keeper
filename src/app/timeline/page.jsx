@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useContext } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { TimelineContext } from "@/context/TimelineContext";
 
 import { FaPhone, FaVideo } from "react-icons/fa";
@@ -20,15 +18,10 @@ const Timeline = () => {
   });
 
   return (
-    <div>
-
-      <Navbar />
-
-      <div className="max-w-5xl mx-auto py-10">
-
-        <h1 className="text-2xl font-bold mb-6">
-          Timeline
-        </h1>
+    <div className="max-w-5xl mx-auto py-10">
+      <h1 className="text-2xl font-bold mb-6">
+        Timeline
+      </h1>
 
         {/* Filter Buttons */}
         <div className="flex gap-4 mb-6">
@@ -102,10 +95,6 @@ const Timeline = () => {
           }
 
         </div>
-
-      </div>
-
-      <Footer />
 
     </div>
   );

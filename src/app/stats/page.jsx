@@ -1,8 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
 import { useContext } from "react";
 import { TimelineContext } from "@/context/TimelineContext";
 
@@ -29,17 +26,12 @@ const Stats = () => {
   ];
 
   return (
-    <div>
+    <div className="max-w-6xl mx-auto py-10">
+      <h1 className="text-2xl font-bold mb-6">
+        Friendship Analytics
+      </h1>
 
-      <Navbar />
-
-      <div className="max-w-6xl mx-auto py-10">
-
-        <h1 className="text-2xl font-bold mb-6">
-          Friendship Analytics
-        </h1>
-
-        <div className="shadow p-6 rounded">
+      <div className="shadow p-6 rounded">
 
           <PieChart width={400} height={300}>
             <Pie
@@ -59,10 +51,6 @@ const Stats = () => {
           </PieChart>
 
         </div>
-
-      </div>
-
-      <Footer />
 
     </div>
   );

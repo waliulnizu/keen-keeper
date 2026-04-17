@@ -1,7 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import friends from "@/data/friends.json";
 import Image from "next/image";
 import { use } from "react";
@@ -22,12 +20,8 @@ const FriendDetails = ({ params }) => {
 
   if (!friend) {
     return (
-      <div>
-        <Navbar />
-        <div className="max-w-6xl mx-auto py-10">
-          <h1 className="text-2xl font-bold">Friend not found</h1>
-        </div>
-        <Footer />
+      <div className="max-w-6xl mx-auto py-10">
+        <h1 className="text-2xl font-bold">Friend not found</h1>
       </div>
     );
   }
@@ -47,10 +41,7 @@ const FriendDetails = ({ params }) => {
   };
 
   return (
-    <div>
-      <Navbar />
-
-      <div className="max-w-6xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="max-w-6xl mx-auto py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
 
         {/* Left Side */}
         <div className="shadow p-6 rounded">
@@ -154,10 +145,6 @@ const FriendDetails = ({ params }) => {
           </div>
 
         </div>
-
-      </div>
-
-      <Footer />
     </div>
   );
 };

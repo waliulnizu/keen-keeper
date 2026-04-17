@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import MyNavLink from "./MyNavLink";
 
 const Navbar = () => {
   return (
@@ -8,9 +10,9 @@ const Navbar = () => {
         <h1 className="text-xl font-bold">KeenKeeper</h1>
 
         <div className="flex gap-6">
-          <Link href="/">Home</Link>
-          <Link href="/timeline">Timeline</Link>
-          <Link href="/stats">Stats</Link>
+          <MyNavLink href="/">Home</MyNavLink>
+          <MyNavLink href="/timeline">Timeline</MyNavLink>
+          <MyNavLink href="/stats">Stats</MyNavLink>
         </div>
       </div>
     </div>
