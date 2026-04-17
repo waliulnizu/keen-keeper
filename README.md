@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+KeenKeeper — Friendship Management App
 
-## Getting Started
+KeenKeeper is a modern friendship management web application that helps users maintain meaningful relationships with friends and relatives
 
-First, run the development server:
+This project was built using Next.js, Tailwind CSS, and Context API following responsive UI principles.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+ Home Page
+Navbar with navigation
+Banner section
+Summary cards
+Friend cards grid
+ 
+ Friend Details Page
+Friend profile information
+Relationship goal
+Quick check-in buttons
+Stats cards
+ 
+ Timeline Page
+Call / Text / Video history
+Filter functionality
 
-To learn more about Next.js, take a look at the following resources:
+ Stats Page
+Friendship Analytics
+Pie Chart using Recharts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Technologies Used
+Next.js (App Router)
+React.js
+Tailwind CSS
+Context API
+React Hot Toast
+Recharts
+JSON Data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+Features
+
+ Navbar
+Responsive Navbar
+Active link highlight
+Icons with navigation
+
+ Banner
+Title and subtitle
+Add friend button
+Summary cards
+
+ Friend Cards
+Dynamic data
+Status color
+Tags
+Responsive grid
+
+ Friend Details
+Profile card
+Stats cards
+Relationship goal
+Quick check-in buttons
+
+ Quick Check-In
+Call
+Text
+Video
+Timeline auto update
+Toast notification
+
+ Timeline
+Interaction history
+Filter by type
+Dynamic updates
+
+ Friendship Analytics
+Pie Chart
+Call/Text/Video count
+
+ Responsive Design
+Mobile
+Tablet
+Desktop
+
+
+
+
+
+
+
+Context API Usage
+
+Context API used for:
+
+Global timeline state
+Quick check-in data sharing
+Analytics data
+
+Files:
+
+src/context/TimelineContext.jsx
+
+Used in:
+
+Friend Details Page
+Timeline Page
+Stats Page
