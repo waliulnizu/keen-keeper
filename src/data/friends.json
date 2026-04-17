@@ -52,51 +52,51 @@
 
 
   {
-    "id": 5,
-    "name": "Emma Wilson",
-    "picture": "https://img.freepik.com/premium-photo/professional-males-colleagues-hd-8k-wallpaper-stock-photographic-image_1033957-29162.jpg?w=2000",
-    "email": "emma@example.com",
-    "days_since_contact": 62,
-    "status": "overdue",
-    "tags": ["college", "close friend"],
-    "bio": "Met during university. We love hiking and traveling.",
-    "goal": 30,
-    "next_due_date": "2026-02-27"
-  },
-  {
-    "id": 6,
-    "name": "David Kim",
-    "picture": "https://img.freepik.com/premium-photo/portrait-young-professional-man-smiling_604472-8539.jpg",
-    "email": "david@example.com",
-    "days_since_contact": 12,
-    "status": "on-track",
-    "tags": ["work"],
-    "bio": "Office colleague and gym partner.",
-    "goal": 20,
-    "next_due_date": "2026-02-15"
-  },
-  {
-    "id": 7,
-    "name": "Lisa Nakamura",
-    "picture": "https://c.pxhere.com/photos/44/dc/smiling_boy_man_professional_happy_people_young_portrait-865531.jpg!d",
-    "email": "lisa@example.com",
-    "days_since_contact": 25,
-    "status": "almost due",
-    "tags": ["travel"],
-    "bio": "Met during Japan tour.",
-    "goal": 30,
-    "next_due_date": "2026-02-18"
-  },
-  {
-    "id": 8,
-    "name": "James Wright",
-    "picture": "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpg",
-    "email": "james@example.com",
-    "days_since_contact": 45,
-    "status": "overdue",
-    "tags": ["business"],
-    "bio": "Business partner.",
-    "goal": 15,
-    "next_due_date": "2026-02-05"
-  }
+  "id": 5,
+  "name": "Ryan Cooper",
+  "picture": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg",
+  "email": "ryan@example.com",
+  "days_since_contact": 8,
+  "status": "on-track",
+  "tags": ["family"],
+  "bio": "Cousin living abroad. We catch up monthly.",
+  "goal": 25,
+  "next_due_date": "2026-02-20"
+},
+{
+  "id": 6,
+  "name": "Michael Chen",
+  "picture": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+  "email": "michael@example.com",
+  "days_since_contact": 33,
+  "status": "almost due",
+  "tags": ["college", "project"],
+  "bio": "Worked together on final year project.",
+  "goal": 30,
+  "next_due_date": "2026-02-12"
+},
+{
+  "id": 7,
+  "name": "Ahmed Hassan",
+  "picture": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
+  "email": "ahmed@example.com",
+  "days_since_contact": 18,
+  "status": "on-track",
+  "tags": ["school", "close friend"],
+  "bio": "School best friend. Regular weekend chats.",
+  "goal": 20,
+  "next_due_date": "2026-02-22"
+},
+{
+  "id": 8,
+  "name": "Daniel Foster",
+  "picture": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+  "email": "daniel@example.com",
+  "days_since_contact": 51,
+  "status": "overdue",
+  "tags": ["business", "network"],
+  "bio": "Met at tech conference.",
+  "goal": 15,
+  "next_due_date": "2026-02-03"
+}
 ]
